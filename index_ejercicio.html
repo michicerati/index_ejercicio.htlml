@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio "Cute" - Bootstrap</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #fcf8f3; 
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        /* 1. Estilo para mi Navbar */
+        .mi-navbar-cute {
+            background-color: #ffe0f0; 
+            border-bottom: 2px solid #ffc0cb;
+        }
+        .mi-navbar-cute .nav-link,
+        .mi-navbar-cute .navbar-brand {
+            color: #d8578b !important; /* !important para sobrescribir Bootstrap */
+        }
+        
+        /* 2. Estilo para mi Card */
+        .mi-card-cute {
+            border-radius: 15px; 
+            border: 1px solid #ffe0f0;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
+        }
+        .mi-card-cute .card-title {
+            color: #d8578b;
+        }
+
+        /* 3. Estilo para mi Alert */
+        .mi-alert-cute {
+            background-color: #e0fff0;
+            color: #5a9c7a;
+            border-color: #b3e6c3;
+            border-radius: 10px;
+        }
+
+        /* 4. Estilo para mi Modal */
+        .mi-modal-content-cute {
+            border-radius: 15px;
+            background-color: #fffafc;
+        }
+
+        /* 5. Estilo para mis Botones */
+        .mi-btn-cute {
+            background-color: #ff99cc;
+            border-color: #ff99cc;
+            color: white;
+            border-radius: 20px; 
+        }
+        .mi-btn-cute:hover {
+            background-color: #ff66b2;
+            border-color: #ff66b2;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg mi-navbar-cute">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-bootstrap-fill me-2"></i>
+                Introducción a Bootstrap
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#miNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="miNavbar">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Galería</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="text-center mb-5">
+            <h1 class="display-5" style="color: #d8578b;">Ejercicio de 5 Componentes 🌸</h1>
+            <p class="lead text-muted">Olga Michelle Rodríguez Bahena</p>
+        </div>
+
+        <h2 class="mt-5 mb-3">1. Componente: Navbar</h2>
+        <p class="text-muted">El primer componente es la barra de navegación (`.navbar`) que está en la parte superior de la página. Le puse la clase `.mi-navbar-cute` para el color rosa.</p>
+
+
+        <h2 class="mt-5 mb-3">2. Componente: Card</h2>
+        <div class="card mi-card-cute" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Mi Tarjeta</h5>
+                <p class="card-text">Esta es una `.card` de Bootstrap. Le añadí la clase `.mi-card-cute` para ponerle bordes redondos y una sombra.</p>
+                <a href="#" class="btn mi-btn-cute">Ver más</a>
+            </div>
+        </div>
+
+        <h2 class="mt-5 mb-3">3. Componente: Alert</h2>
+        <div class="alert mi-alert-cute alert-dismissible fade show" role="alert">
+            <strong>¡Aviso!</strong> Esta es una `.alert` de Bootstrap, personalizada con mi estilo.
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        </div>
+
+        <h2 class="mt-5 mb-3">4. Componente: Modal</h2>
+        
+        <button type="button" class="btn mi-btn-cute" data-bs-toggle="modal" data-bs-target="#miModal">
+            <i class="bi bi-magic"></i> Lanzar Ventana Modal
+        </button>
+
+        <div class="modal fade" id="miModal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content mi-modal-content-cute">
+                    <div class="modal-header">
+                        <h5 class="modal-title" style="color: #d8578b;">✨ Mi Ventana Modal ✨</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Este es un `.modal` de Bootstrap. Le puse mi estilo al `.modal-content`.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn mi-btn-cute">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="mt-5 mb-3">5. Componente: Button</h2>
+        <p>Estos botones usan la clase base `.btn` de Bootstrap y mi clase `.mi-btn-cute`.</p>
+        <button type="button" class="btn mi-btn-cute">Mi Botón Lindo</button>
+    </div> 
+    
+    <footer class="container mt-5 py-4 border-top">
+        <p class="text-center text-muted">Hecho con <i class="bi bi-heart-fill" style="color: #ff66b2;"></i> por Olga Michelle Rodríguez Bahena.</p>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
