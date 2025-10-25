@@ -3,60 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index_ejercicio</title>
+    <!-- Título corregido, ahora es profesional -->
+    <title>Ejercicio Componentes Bootstrap - Olga Rodriguez</title>
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- 1. CSS de Bootstrap (Base de la tarea) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
+    <!-- 2. CSS de Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <!-- 3. Mi CSS Personalizado (Nombres de clase neutrales) -->
     <style>
         body {
             background-color: #fcf8f3; 
             font-family: 'Segoe UI', sans-serif;
         }
 
-        /* 1. Estilo para mi Navbar */
-        .mi-navbar-cute {
+        /* 1. Estilo para Navbar */
+        .navbar-personalizada {
             background-color: #ffe0f0; 
             border-bottom: 2px solid #ffc0cb;
         }
-        .mi-navbar-cute .nav-link,
-        .mi-navbar-cute .navbar-brand {
-            color: #d8578b !important; /* !important para sobrescribir Bootstrap */
+        .navbar-personalizada .nav-link,
+        .navbar-personalizada .navbar-brand {
+            color: #d8578b !important; 
         }
         
-        /* 2. Estilo para mi Card */
-        .mi-card-cute {
+        /* 2. Estilo para Card */
+        .card-personalizada {
             border-radius: 15px; 
             border: 1px solid #ffe0f0;
             box-shadow: 0 4px 8px rgba(0,0,0,0.05); 
         }
-        .mi-card-cute .card-title {
+        .card-personalizada .card-title {
             color: #d8578b;
         }
 
-        /* 3. Estilo para mi Alert */
-        .mi-alert-cute {
+        /* 3. Estilo para Alert */
+        .alert-personalizado {
             background-color: #e0fff0;
             color: #5a9c7a;
             border-color: #b3e6c3;
             border-radius: 10px;
         }
 
-        /* 4. Estilo para mi Modal */
-        .mi-modal-content-cute {
+        /* 4. Estilo para Modal */
+        .modal-content-personalizado {
             border-radius: 15px;
             background-color: #fffafc;
         }
 
-        /* 5. Estilo para mis Botones */
-        .mi-btn-cute {
+        /* 5. Estilo para Botones */
+        .btn-personalizado {
             background-color: #ff99cc;
             border-color: #ff99cc;
             color: white;
             border-radius: 20px; 
         }
-        .mi-btn-cute:hover {
+        .btn-personalizado:hover {
             background-color: #ff66b2;
             border-color: #ff66b2;
             color: white;
@@ -65,7 +69,12 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg mi-navbar-cute">
+    <!-- ============================================= -->
+    <!-- 1. Componente NAVBAR -->
+    <!-- Clases Base: .navbar, .navbar-expand-lg, etc. -->
+    <!-- Clase Personalizada: .navbar-personalizada -->
+    <!-- ============================================= -->
+    <nav class="navbar navbar-expand-lg navbar-personalizada">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
                 <i class="bi bi-bootstrap-fill me-2"></i>
@@ -87,65 +96,93 @@
         </div>
     </nav>
 
+    <!-- Contenedor principal -->
     <div class="container mt-5">
 
+        <!-- Encabezado con nombre -->
         <div class="text-center mb-5">
-            <h1 class="display-5" style="color: #d8578b;">Ejercicio de 5 Componentes 🌸</h1>
+            <h1 class="display-5" style="color: #d8578b;">Ejercicio de 5 Componentes</h1>
             <p class="lead text-muted">Olga Michelle Rodríguez Bahena</p>
         </div>
 
+        <!-- ============================================= -->
+        <!-- 1. Componente: Navbar (Título) -->
+        <!-- ============================================= -->
         <h2 class="mt-5 mb-3">1. Componente: Navbar</h2>
-        <p class="text-muted">El primer componente es la barra de navegación (`.navbar`) que está en la parte superior de la página. Le puse la clase `.mi-navbar-cute` para el color rosa.</p>
+        <p class="text-muted">El primer componente es la barra de navegación (`.navbar`) en la parte superior. Se usó la clase `.navbar-personalizada` para modificar el color.</p>
 
 
+        <!-- ============================================= -->
+        <!-- 2. Componente: CARD -->
+        <!-- Clase Base: .card -->
+        <!-- Clase Personalizada: .card-personalizada -->
+        <!-- ============================================= -->
         <h2 class="mt-5 mb-3">2. Componente: Card</h2>
-        <div class="card mi-card-cute" style="width: 18rem;">
+        <div class="card card-personalizada" style="width: 18rem;">
             <div class="card-body">
                 <h5 class="card-title">Mi Tarjeta</h5>
-                <p class="card-text">Esta es una `.card` de Bootstrap. Le añadí la clase `.mi-card-cute` para ponerle bordes redondos y una sombra.</p>
-                <a href="#" class="btn mi-btn-cute">Ver más</a>
+                <p class="card-text">Esta es una `.card` de Bootstrap. Se añadió la clase `.card-personalizada` para modificar los bordes y la sombra.</p>
+                <a href="#" class="btn btn-personalizado">Ver más</a>
             </div>
         </div>
 
+        <!-- ============================================= -->
+        <!-- 3. Componente: ALERT -->
+        <!-- Clases Base: .alert, .alert-dismissible, etc. -->
+        <!-- Clase Personalizada: .alert-personalizado -->
+        <!-- ============================================= -->
         <h2 class="mt-5 mb-3">3. Componente: Alert</h2>
-        <div class="alert mi-alert-cute alert-dismissible fade show" role="alert">
-            <strong>¡Aviso!</strong> Esta es una `.alert` de Bootstrap, personalizada con mi estilo.
+        <div class="alert alert-personalizado alert-dismissible fade show" role="alert">
+            <strong>¡Aviso!</strong> Esta es una `.alert` de Bootstrap, personalizada con `.alert-personalizado`.
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
         </div>
 
+        <!-- ============================================= -->
+        <!-- 4. Componente: MODAL -->
+        <!-- Clases Base: .modal, .modal-content, etc. -->
+        <!-- Clase Personalizada: .modal-content-personalizado -->
+        <!-- ============================================= -->
         <h2 class="mt-5 mb-3">4. Componente: Modal</h2>
         
-        <button type="button" class="btn mi-btn-cute" data-bs-toggle="modal" data-bs-target="#miModal">
-            <i class="bi bi-magic"></i> Lanzar Ventana Modal
+        <button type="button" class="btn btn-personalizado" data-bs-toggle="modal" data-bs-target="#miModal">
+            <i class="bi bi-window-stack"></i> Lanzar Ventana Modal
         </button>
 
         <div class="modal fade" id="miModal" tabindex="-1">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content mi-modal-content-cute">
+                <!-- Combinando la clase de Bootstrap con la clase personalizada -->
+                <div class="modal-content modal-content-personalizado">
                     <div class="modal-header">
-                        <h5 class="modal-title" style="color: #d8578b;">✨ Mi Ventana Modal ✨</h5>
+                        <h5 class="modal-title" style="color: #d8578b;">Mi Ventana Modal</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                     </div>
                     <div class="modal-body">
-                        <p>Este es un `.modal` de Bootstrap. Le puse mi estilo al `.modal-content`.</p>
+                        <p>Este es un `.modal` de Bootstrap. Se aplicó un estilo al `.modal-content`.</p>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn mi-btn-cute">Guardar</button>
+                        <button type="button" class="btn btn-personalizado">Guardar</button>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- ============================================= -->
+        <!-- 5. Componente: BUTTON -->
+        <!-- Clase Base: .btn -->
+        <!-- Clase Personalizada: .btn-personalizado -->
+        <!-- ============================================= -->
         <h2 class="mt-5 mb-3">5. Componente: Button</h2>
-        <p>Estos botones usan la clase base `.btn` de Bootstrap y mi clase `.mi-btn-cute`.</p>
-        <button type="button" class="btn mi-btn-cute">Mi Botón Lindo</button>
+        <p>Estos botones usan la clase base `.btn` de Bootstrap y la clase `.btn-personalizado`.</p>
+        <button type="button" class="btn btn-personalizado">Botón Personalizado</button>
     </div> 
     
+    <!-- Footer -->
     <footer class="container mt-5 py-4 border-top">
-        <p class="text-center text-muted">Hecho con <i class="bi bi-heart-fill" style="color: #ff66b2;"></i> por Olga Michelle Rodríguez Bahena.</p>
+        <p class="text-center text-muted">Desarrollado por Olga Michelle Rodríguez Bahena.</p>
     </footer>
     
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!-- 4. JavaScript de Bootstrap (Importante para que funcionen el Modal y la Navbar) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
